@@ -58,7 +58,6 @@ client.on("guildMemberAdd", member => {
   description: ' *** نورتنا والله *** !',
 }}).catch(console.error);
   }
-);
-
+});
 
 client.login(process.env.BOT_TOKEN);
