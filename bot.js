@@ -34,7 +34,7 @@ const mmss = require('ms');
             let messageArray = message.content.split(" ");
             let muteRole = message.guild.roles.find("name", "Muted");
             let time = messageArray[2];
-            if(message.content.startsWith(prefix + "اسكت")) {
+            if(message.content.startsWith(prefix + "os")) {
                 if(!message.member.hasPermission('MUTE_MEMBERS')) return message.channel.send('**Sorry But You Dont Have Permission** `MUTE_MEMBERS`' );
                 if(!mutePerson) return message.channel.send('**منشن شخص**')
                 if(mutePerson === message.author) return message.channel.send('**لاتستطيع اعطاء ميوت لنفسك**');
