@@ -26,30 +26,12 @@ const client = new Discord.Client();
     }
 }); 
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+client.on("ready", () => { // حقوق سيرفركودز
+  function lol() {
+    client.guilds.get('505075875771842571').roles.find("name", "Admins").setColor("RANDOM");
+  };
+  setInterval(lol, 1000);
 });
-
-client.on('message', msg => {
-  if (msg.content === 'السلام عليكم') {
-    msg.reply('وعليكم السلام');
-  }
-});
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.on('message', msg => {
-  if (msg.content === 'باك') {
-    msg.reply('ولكم باك');
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'ابي رتبة') {
-    msg.reply('اتصل بالادمين');
-  }
-});
-
 
 
 client.login(process.env.BOT_TOKEN);
