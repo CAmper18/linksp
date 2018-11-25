@@ -34,15 +34,15 @@ const mmss = require('ms');
             let messageArray = message.content.split(" ");
             let muteRole = message.guild.roles.find("name", "Muted");
             let time = messageArray[2];
-            if(message.content.startsWith(prefix + "tempmute")) {
+            if(message.content.startsWith(prefix + "اسكت")) {
                 if(!message.member.hasPermission('MUTE_MEMBERS')) return message.channel.send('**Sorry But You Dont Have Permission** `MUTE_MEMBERS`' );
                 if(!mutePerson) return message.channel.send('**منشن شخص**')
                 if(mutePerson === message.author) return message.channel.send('**لاتستطيع اعطاء ميوت لنفسك**');
                 if(mutePerson === client.user) return message.channel.send('**لاتستطيع اعطاء البوت ميوت**');
                 if(message.guild.member(mutePerson).roles.has(muteRole.id)) return message.channel.send('**This Person Already Tempmuted !**');
                 if(!muteRole) return message.guild.createRole({ name: "Muted", permissions: [] });
-                if(!time) return message.channel.send("**Type The Duration**");
-                if(!time.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**The Bot Not Support This Time**');
+                if(!time) return message.channel.send("**اكتب المدة**");
+                if(!time.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**البوت لا يدعم هذا الوقت**');
                 if(!muteReason) return message.channel.send('**اكتب السبب\\')
                 message.guild.member(mutePerson).addRole(muteRole);
                 message.channel.send(`**:white_check_mark: ${mutePerson} has been Muted ! :zipper_mouth: **`)
