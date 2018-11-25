@@ -26,12 +26,7 @@ const client = new Discord.Client();
     }
 }); 
 
-client.on("ready", () => { // حقوق سيرفركودز
-  function lol() {
-    client.guilds.get('505075875771842571').roles.find("name", "Admins").setColor("RANDOM");
-  };
-  setInterval(lol, 1000);
-});
+
 
 
 client.login(process.env.BOT_TOKEN);
