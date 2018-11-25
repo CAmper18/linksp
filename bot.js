@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
  client.on('message', message => {
@@ -25,6 +25,30 @@ const client = new Discord.Client();
       message.author.sendEmbed(Embed11)
     }
 }); 
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'السلام عليكم') {
+    msg.reply('وعليكم السلام');
+  }
+});
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'باك') {
+    msg.reply('ولكم باك');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'ابي رتبة') {
+    msg.reply('اتصل بالادمين');
+  }
+});
 
 
 
