@@ -26,7 +26,12 @@ const client = new Discord.Client();
     }
 }); 
 
-
+client.on('message', msg => {//// حقوق @Acura ,#0002
+  if(msg.content ===('هلا')
+              setTimeout(function() {  
+msg.reply('** هلا فيك حبيبي  . **')
+              }, 00)
+});
 
 
 client.login(process.env.BOT_TOKEN);
