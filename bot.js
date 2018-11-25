@@ -28,8 +28,6 @@ const client = new Discord.Client();
    
 }); 
 
-const Eris = require("eris");
-var Acura = new Eris("NTE2MDIzNjY0ODk5MjYwNDE5.DttoRg.bI9W_U-_iSqB-i00-ERm0kxCnMc");
 Acura.on("ready", () => {
     console.log("tm");
     onstart();
