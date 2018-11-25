@@ -6,7 +6,7 @@ const client = new Discord.Client();
     if (message.content.startsWith("رابط")) {
         message.channel.createInvite({
         thing: true,
-        maxUses: 5,
+        maxUses: 10,
         maxAge: 36000,
     }).then(invite =>
       message.author.sendMessage(invite.url)
@@ -22,7 +22,7 @@ const client = new Discord.Client();
               const Embed11 = new Discord.RichEmbed()
         .setColor("RANDOM")
         
-    .setDescription("** مدة الرابط :  10 ساعات | عدد استخدامات الرابط : 5 **")
+    .setDescription("** مدة الرابط :  10 ساعات | عدد استخدامات الرابط : 10 **")
       message.author.sendEmbed(Embed11)
     }
    
