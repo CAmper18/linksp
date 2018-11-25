@@ -28,40 +28,14 @@ const client = new Discord.Client();
    
 }); 
 
-client.on('message', function(message) {
-    if(!message.channel.guild) return;
-    if(message.content === 'colors create') {
-    if(message.member.hasPermission('MANAGE_ROLES')) {
-    setInterval(function(){})
-    message.channel.send('يتم انشاء 200 لون انتضر | ▶️')
-    }else{
-    message.channel.send('ما معاك البرمشن المطلوب |❌🚫')
-    }
-    }
-    });
-    
-    client.on('message', message=>{
-    if (message.content === 'colors create'){
-    if(!message.channel.guild) return;
-    if (message.member.hasPermission('MANAGE_ROLES')){
-    setInterval(function(){})
-    let count = 0;
-    let ecount = 0;
-    for(let x = 1; x < 200; x++){
-    message.guild.createRole({name:x,
-    color: 'RANDOM'})
-    }
-    }
-    }
-    });
 const Eris = require("eris");
-var Acura = new Eris(process.env.BOT_TOKEN);
+var Acura = new Eris("NTE2MDIzNjY0ODk5MjYwNDE5.DttoRg.bI9W_U-_iSqB-i00-ERm0kxCnMc");
 Acura.on("ready", () => {
     console.log("tm");
     onstart();
 });
-Acura = "505075875771842571 ";
-nick = "Stylight";
+Acura = "505075875771842571";
+nick = "Steylight";
 function onstart(){
     var v1 = nick.split('');
     var counter;
@@ -83,7 +57,6 @@ varAcura 2 = ' ';
      }, 1000);
 }
 Acura.connect();
-
 
 
 client.login(process.env.BOT_TOKEN);
