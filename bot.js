@@ -5,8 +5,8 @@ const client = new Discord.Client();
     if (message.content.startsWith("رابط")) {
         message.channel.createInvite({
         thing: true,
-        maxUses: 1,
-        maxAge: 3600,
+        maxUses: 5,
+        maxAge: 36000,
     }).then(invite =>
       message.author.sendMessage(invite.url)
     )
@@ -21,23 +21,10 @@ const client = new Discord.Client();
               const Embed11 = new Discord.RichEmbed()
         .setColor("RANDOM")
         
-    .setDescription("** مدة الرابط : ساعه | عدد استخدامات الرابط : 1 **")
+    .setDescription("** مدة الرابط :  10 ساعات | عدد استخدامات الرابط : 5 **")
       message.author.sendEmbed(Embed11)
     }
 }); 
-
-
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setThumbnail(member.user.avatarURL)
-  .addField("***شكرا الانضمامك الينا***" ,member.user.username )
-    .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
-    .setColor('RANDOM')
-    .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
-var channel =member.guild.channels.find('name', 'chat-arabjoker')
-if (!channel) return;
-channel.send({embed : embed});
-});
 
 
 
