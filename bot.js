@@ -36,7 +36,7 @@ client.on('message', msg => {
   command = command.slice(prefix.length);
   let args = msg.content.split(" ").slice(1);
 
-    if(command === "امسح") {
+    if(command === "ms") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
@@ -58,7 +58,7 @@ client.on("message", message => {
      
      let command = message.content.split(" ")[0];
      
-     if (command === "$mute") {
+     if (command === "$bala3") {
            if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
      let user = message.mentions.users.first();
      let modlog = client.channels.find('name', 'mute-log');
@@ -92,7 +92,7 @@ client.on("message", message => {
      
      let command = message.content.split(" ")[0];
      
-     if (command === "$unmute") {
+     if (command === "$ahdar") {
            if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
      let user = message.mentions.users.first();
      let modlog = client.channels.find('name', 'mute-log');
