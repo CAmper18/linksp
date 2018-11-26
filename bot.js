@@ -175,6 +175,11 @@ client.on('message', msg => {
       msg.reply('**زوجلي اختك **');
     }
   });
+client.on('message', msg => {
+    if (msg.content === 'عطاي السيرفر') {
+      msg.reply('**اسحاق**');
+    }
+  });
 
 
 
