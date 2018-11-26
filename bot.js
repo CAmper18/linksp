@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "!";
 
 
  client.on('message', message => {
@@ -171,7 +172,6 @@ client.on('message', msg => {
 
 
 
-const prefix = "!";
  if(message.content.startsWith(prefix + 'invite')) {
 let guild = message.guild
 var codes = [""]
