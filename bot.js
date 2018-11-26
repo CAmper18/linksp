@@ -110,6 +110,83 @@ client.on('message', message => {
 
 
 
+client.on('message', msg => {
+    if (msg.content === 'احبك') {
+      msg.reply('**لاتحتك يا اخوي لو سمحت**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'السلام عليكم') {
+      msg.reply('**وعليكم السلام **');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'شكرا') {
+      msg.reply('**العفو**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'ابي رتبة') {
+      msg.reply('**اتكلم مع الادارة ما تقولها في الشات**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'الاوامر') {
+      msg.reply('**الاوامر في روم بوت**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'كيفكم') {
+      msg.reply('**طيبين**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'اسكت') {
+      msg.reply('**لا تزعج الاعضاء**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'مبرمج السيرفر') {
+      msg.reply('**عبــــــــد الهــــادي**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'مين صنع السيرفر') {
+      msg.reply('**برسوفيور**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'انا دعوت الاشخاص') {
+      msg.reply('**اكتب الامر -new credit **');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'ابي اتواصل مع الادارة ') {
+      msg.reply('**اكتب امر التيكت -new Sup **');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'ابي كريديت') {
+      msg.reply('**روح لامك تعطيك كريديت مافي هون**');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'راك كبير') {
+      msg.reply('**زوجلي اختك **');
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
