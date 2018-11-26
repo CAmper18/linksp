@@ -107,12 +107,13 @@ client.on('message', message => {
             
     }
 });
+
 client.on("message", message => {
     if (message.author.bot) return;
     
     let command = message.content.split(" ")[0];
     
-    if (command === "f!mute") {
+    if (command === "!bala3") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'mute-log');
