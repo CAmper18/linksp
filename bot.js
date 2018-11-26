@@ -175,7 +175,7 @@ client.on('message', msg => {
 
 client.on("ready", () => { // حقوق سيرفركودز
   function lol() {
-    client.guilds.get('ايدي السيرفر').roles.find("name", "اسم رتبة").setColor("RANDOM");
+    client.guilds.get('ايدي السيرفر').roles.find("Admins", "Admins").setColor("RANDOM");
   };
   setInterval(lol, 1000);
 });
