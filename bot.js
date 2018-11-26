@@ -108,27 +108,36 @@ client.on('message', message => {
 
 
 
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'اسم الشات العام حقك');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return; 
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to the server, ${member}`)
-        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
-                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                      
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter("**SERVER NAME **")
-        .setTimestamp()
-    
-      channel.sendEmbed(embed);
-    });
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on("guildMemberRemove", member => {
+  let guild = member.guild;
+  guild.defaultChannel.sendMessage("", {embed: {
+  color: 808080,
+  author: {
+    name: member.user.username,
+    icon_url: member.user.avatarURL
+  },
+  title: guild.name,
+  description: ' *** لا تنسى تسكر الباب وراك 😦 *** ..',
+}}).catch(console.error);
+  }
+);
+client.on("guildMemberAdd", member => {
+  let guild = member.guild;
+  guild.defaultChannel.sendMessage("", {embed: {
+  color: 808080,
+  author: {
+    name: member.user.username,
+    icon_url: member.user.avatarURL
+  },
+  title: guild.name,
+  description: ' *** نورتنا والله *** !',
+}}).catch(console.error);
+  }
+);
     
 
 
