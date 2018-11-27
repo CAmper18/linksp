@@ -172,7 +172,7 @@ client.on('message', msg => {
 
 client.on("message", (message) => {
     /// ABDOU
-   if (message.content.startsWith("-new")) {     /// ABDOU
+   if (message.content.startsWith("$new")) {     /// ABDOU
         const reason = message.content.split(" ").slice(1).join(" ");     /// ABDOU
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`لازم تسوي رتبة اسمها \`Support Team\` وتنطي البوت ادمنيتر حتا يقدر يسوي الرومات ويعدل برمشنات`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
