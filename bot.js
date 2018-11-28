@@ -170,17 +170,16 @@ client.on('message', msg => {
 
 
 
-  client.on('message', message => {
+
+
+client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('.com')){
+    if(message.content.includes('discord.gg')){
       if(!message.member.hasPermission('MANAGE_MESSAGE'))
         message.delete()
-    return message.reply(`**Don't Share Links Plz :x:**`)
+    return message.reply(`**لا ترسل روابط عشان لا تتبند**`)
     }
 });
-
-
-
 
 
 
