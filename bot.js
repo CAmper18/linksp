@@ -172,14 +172,7 @@ client.on('message', msg => {
 
 
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('MANAGE_MESSAGE'))
-        message.delete()
-    return message.reply(`**لا ترسل روابط عشان لا تتبند**`)
-    }
-});
+
 
 
 
