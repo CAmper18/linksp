@@ -145,14 +145,10 @@ client.on('message', msg => {
       msg.reply('**برسوفيور**');
     }
   });
-  client.on('message', msg => {
-    if (msg.content === 'انا دعوت الاشخاص') {
-      msg.reply('**اكتب الامر -new credit **');
-    }
-  });
+
   client.on('message', msg => {
     if (msg.content === 'ابي اتواصل مع الادارة ') {
-      msg.reply('**اكتب امر التيكت -new Sup **');
+      msg.reply('**استنا حتى يكونو اون لاين **');
     }
   });
   client.on('message', msg => {
@@ -165,11 +161,27 @@ client.on('message', msg => {
       msg.reply('**الكبير ربي **');
     }
   });
+  client.on('message', msg => {
+    if (msg.content === 'وتف') {
+      msg.reply('** احسنWTF هاذي اسمها اغتصاب للغة الاجانب اكبها  **');
+    }
+  });
 
-
-
-
-
+  client.on('message', msg => {
+    if (msg.content === 'اونر السيرفر') {
+      msg.reply('**بروفيسور  **');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content === 'راك كبير') {
+      msg.reply('**الكبير ربي **');
+    }
+  });
+   client.on('message', msg => {
+    if (msg.content === 'ابي ابلغ عن شخص') {
+      msg.reply('**اتكلم مع الادارة بسرعة وصور وش كان يقول  **');
+    }
+  });
 
 
 
